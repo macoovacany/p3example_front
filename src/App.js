@@ -1,11 +1,6 @@
 import React from 'react';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
-import {
-  ApolloClient,
-  InMemoryCache,
-  ApolloProvider,
-  createHttpLink,
-} from '@apollo/client';
+import { ApolloClient, InMemoryCache, ApolloProvider, createHttpLink } from '@apollo/client';
 import { setContext } from '@apollo/client/link/context';
 
 import Home from './pages/Home';
@@ -17,7 +12,7 @@ import { StoreProvider } from './state/GlobalState';
 import Profile from './pages/Profile';
 
 const httpLink = createHttpLink({
-  uri: '/graphql',
+  uri: process.env.REACT_APP_BASEURL + '/graphql',
 });
 
 const authLink = setContext((_, { headers }) => {
@@ -41,10 +36,7 @@ function App() {
       <Router>
         <div>
           <StoreProvider>
-
-
             <Nav />
-
             <Switch>
               <Route exact path="/" component={Home} />
               <Route exact path="/login" component={Login} />

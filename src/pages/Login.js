@@ -37,23 +37,11 @@ function Login() {
       <form onSubmit={handleFormSubmit}>
         <div className="flex-row space-between my-2">
           <label htmlFor="email">Email address:</label>
-          <input
-            placeholder="youremail@test.com"
-            name="email"
-            type="email"
-            id="email"
-            onChange={handleChange}
-          />
+          <input placeholder="youremail@test.com" name="email" type="email" id="email" onChange={handleChange} />
         </div>
         <div className="flex-row space-between my-2">
           <label htmlFor="pwd">Password:</label>
-          <input
-            placeholder="******"
-            name="password"
-            type="password"
-            id="pwd"
-            onChange={handleChange}
-          />
+          <input placeholder="******" name="password" type="password" id="pwd" onChange={handleChange} />
         </div>
         {error ? (
           <div>

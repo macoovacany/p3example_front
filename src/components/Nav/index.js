@@ -11,6 +11,9 @@ function Nav() {
             <Link to="/profile">Profile</Link>
           </li>
           <li className="mx-1">
+            <Link to="/tasks">Tasks</Link>
+          </li>
+          <li className="mx-1">
             {/* this is not using the Link component to logout or user and then refresh the application to the start */}
             <a href="/" onClick={() => Auth.logout()}>
               Logout
@@ -35,7 +38,7 @@ function Nav() {
   return (
     <header className="flex-row px-1">
       <h1>
-        <Link to="/">My App</Link>
+        <Link to="/">Yak Shavers</Link>
       </h1>
 
       <nav>{showNavigation()}</nav>

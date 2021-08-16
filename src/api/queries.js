@@ -38,6 +38,12 @@ export const QUERY_TASKS = gql`
 
 export const QUERY_USER_TASKS = gql`
   query getUserTasks {
+    user {
+      _id
+      firstName
+      lastName
+      email
+    }
     tasks {
       _id
       name
